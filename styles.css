@@ -1,0 +1,58 @@
+.col h2{
+    font-weight: bold;
+}
+
+.brand-name{
+    display: flex;
+    justify-content: space-around;
+}
+
+.gap{
+    padding:10px;
+    margin:10px;
+}
+
+.hero-section{
+    padding:2% 6% 2% 6%;
+    margin:auto;
+   
+}
+.hero-wrapper{
+
+    display:grid;
+    gap: 10%;
+    grid-template-columns: 1fr 1fr;
+}
+
+h2 span{
+   color:#D05270;
+   font-weight: bolder;
+}
+
+.twitter{
+    background: #47ACDF;
+}
+
+.linkedin{
+    background: #1275B1;
+}
+
+.medium{
+    background: #000000;
+}
+
+.btn{
+    color:#fff;
+    padding: 1% 2% 1% 2%;
+}
+
+button i{
+    padding-right:10px;
+}
+
+.buttons{
+    display: flex;
+    gap:2.5%;
+}
+
+
