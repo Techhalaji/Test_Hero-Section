@@ -1,9 +1,53 @@
-.col h2{
+.nav-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.nav-menu {
+    display: none; 
+}
+
+
+.hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #D05270;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.links-wrapper{
+display:flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+} 
+
+.nav-link{
+    text-decoration: none;
+    color:#D05270;
+
+}
+
+
+.nav-link:active{
+   color: red;
+}
+
+.nav-link:hover{
+    color: black ;
+} 
+
+
+.logo h2{
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .brand-name{
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
@@ -17,12 +61,25 @@
     margin:auto;
    
 }
-.hero-wrapper{
 
+.hero-wrapper {
+    display: grid;
+    gap: 10px;
+    grid-template-rows:auto auto;
+}
+
+ @media screen and (min-width: 768px) {
+    .hero-wrapper {
+       grid-template-columns: 1fr 1fr ; 
+       grid-template-rows: auto; 
+    }
+    }
+
+/*.hero-wrapper{
     display:grid;
     gap: 10%;
     grid-template-columns: 1fr 1fr;
-}
+} */
 
 h2 span{
    color:#D05270;
@@ -42,8 +99,10 @@ h2 span{
 }
 
 .btn{
+    width:8.8rem;
     color:#fff;
     padding: 1% 2% 1% 2%;
+    border: none;
 }
 
 button i{
