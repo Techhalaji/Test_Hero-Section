@@ -1,8 +1,12 @@
-const hamburger = document.querySelector('.hamburger');
+const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    document.getElementByclassName('linksWrapper').style.display = 'none'
-    document.getElementByclassName('navMenu').style.display = 'block'
-   
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+document.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !navToggle.contains(event.target)) {
+        navLinks.classList.remove('show');
+    }
 });

@@ -1,27 +1,22 @@
-.nav-wrapper{
+.nav-inner{
     display:grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
-.nav-menu {
-    display: none; 
+
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-
-.hamburger .bar {
-    width: 30px;
-    height: 3px;
-    background-color: #D05270;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.links-wrapper{
+.nav-links{
 display:flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
+list-style: none;
 } 
 
 .nav-link{
@@ -29,7 +24,6 @@ justify-content: space-between;
     color:#D05270;
 
 }
-
 
 .nav-link:active{
    color: red;
@@ -40,20 +34,32 @@ justify-content: space-between;
 } 
 
 
-.logo h2{
+.logo-text{
     font-size: 2rem;
     font-weight: bold;
 }
 
-.brand-name{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        line-height: 1.5;
+    }
+    .nav-links.show {
+        display: flex;
+    }
 
-.gap{
-    padding:10px;
-    margin:10px;
+    .nav-toggle {
+      display: inline-block;
+      position: relative;
+      margin-left: 500px;
+      bottom: 80px;
+
+    }
 }
 
 .hero-section{
