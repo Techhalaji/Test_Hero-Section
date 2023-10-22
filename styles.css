@@ -1,123 +1,198 @@
-.nav-inner{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+/* CORRECTIONS CODES STARTS */
+/*
+ UNIVERSAL SELECTOR === " * " 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+nav {
+  /* border: 1px solid red; */
+}
+
+/* CORRECTIONS CODES ENDS HERE */
+
+.nav-inner {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  */
+}
+
+.nav_links_mobile {
+  display: none;
+  position: absolute;
+  top: 3.5rem;
+  right: 1rem;
+  list-style: none;
+  border: 1px solid red;
+  width: 10rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.nav_links_mobile.show {
+  display: block;
+}
 
 .nav-toggle {
+  /* display: none; */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+  /* display: flex; */
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #d05270;
+}
+
+.nav-link:active {
+  color: red;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.logo-text h2 {
+  font-size: 1rem;
+  /* font-size: 2rem; */
+  font-weight: 600;
+  width: fit-content;
+}
+
+/* @media screen and (max-width: 768px) {
+  .nav-links {
     display: none;
-    font-size: 24px;
-    cursor: pointer;
-}
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    line-height: 1.5;
+  }
+  .nav-links.show {
+    display: flex;
+  }
 
-.nav-links{
-display:flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-list-style: none;
-} 
+  .nav-toggle {
+    display: inline-block;
+    position: relative;
+    margin-left: 500px;
+    bottom: 80px;
+  }
+} */
 
-.nav-link{
-    text-decoration: none;
-    color:#D05270;
-
-}
-
-.nav-link:active{
-   color: red;
-}
-
-.nav-link:hover{
-    color: black ;
-} 
-
-
-.logo-text{
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        line-height: 1.5;
-    }
-    .nav-links.show {
-        display: flex;
-    }
-
-    .nav-toggle {
-      display: inline-block;
-      position: relative;
-      margin-left: 500px;
-      bottom: 80px;
-
-    }
-}
-
-.hero-section{
-    padding:2% 6% 2% 6%;
-    margin:auto;
-   
+.hero-section {
+  padding: 2% 6% 2% 6%;
+  margin: auto;
 }
 
 .hero-wrapper {
-    display: grid;
-    gap: 10px;
-    grid-template-rows:auto auto;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: auto auto;
 }
-
- @media screen and (min-width: 768px) {
-    .hero-wrapper {
-       grid-template-columns: 1fr 1fr ; 
-       grid-template-rows: auto; 
-    }
-    }
-
-/*.hero-wrapper{
-    display:grid;
-    gap: 10%;
+/* 
+@media screen and (min-width: 768px) {
+  .hero-wrapper {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
 } */
 
-h2 span{
-   color:#D05270;
-   font-weight: bolder;
+/* .hero-wrapper {
+  display: grid;
+  gap: 10%;
+  grid-template-columns: 1fr 1fr;
+} */
+
+h2 span {
+  color: #d05270;
+  font-weight: bolder;
 }
 
-.twitter{
-    background: #47ACDF;
+.twitter {
+  background: #47acdf;
 }
 
-.linkedin{
-    background: #1275B1;
+.linkedin {
+  background: #1275b1;
 }
 
-.medium{
-    background: #000000;
+.medium {
+  background: #000000;
 }
 
-.btn{
-    width:8.8rem;
-    color:#fff;
-    padding: 1% 2% 1% 2%;
-    border: none;
+.btn {
+  width: 8.8rem;
+  color: #fff;
+  /* padding: 1% 2% 1% 2%; */
+  /* padding: 1rem 2rem 1rem 2rem; */
+  padding: 1rem 2rem;
+  border: none;
 }
 
-button i{
-    padding-right:10px;
+button i {
+  padding-right: 10px;
 }
 
-.buttons{
+.buttons {
+  display: flex;
+  gap: 2.5%;
+}
+
+/* MEDIA SCREENS STYLES */
+/* 
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1200px) {
+}
+
+DON'T USE MAX-WIDTH USE MIN-WIDTH INSTEAD!!!!!!!!
+
+ */
+
+@media screen and (min-width: 768px) {
+  .nav-toggle,
+  .nav_links_mobile,
+  .nav_links_mobile.show {
+    display: none;
+  }
+
+  .nav_links_mobile {
+    display: none;
+  }
+
+  .nav-links {
     display: flex;
-    gap:2.5%;
+    gap: 1.5rem;
+  }
 }
 
+@media screen and (min-width: 1024px) {
+  .logo-text h2 {
+    font-size: 2rem;
+  }
+}
 
+@media screen and (min-width: 1200px) {
+}
